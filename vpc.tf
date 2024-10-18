@@ -2,7 +2,7 @@
 resource "aws_vpc" "vpc" {
   cidr_block       = "10.0.0.0/16"
   tags = {
-    Name = "mehar-two-tier-vpc"
+    Name = "naeim-two-tier-vpc"
   }
 }
 
@@ -11,7 +11,7 @@ resource "aws_internet_gateway" "ig" {
   vpc_id = aws_vpc.vpc.id
 
   tags = {
-    Name = "mehar-two-tier-ig"
+    Name = "naeim-two-tier-ig"
   }
 }
 
@@ -23,7 +23,7 @@ resource "aws_subnet" "public_1" {
   map_public_ip_on_launch = true
 
   tags = {
-    Name = "mehar-public-1"
+    Name = "naeim-public-1"
   }
 }
 
@@ -34,7 +34,7 @@ resource "aws_subnet" "public_2" {
   map_public_ip_on_launch = true
 
   tags = {
-    Name = "mehar-public-2"
+    Name = "naeim-public-2"
   }
 }
 
@@ -46,7 +46,7 @@ resource "aws_subnet" "private_1" {
   map_public_ip_on_launch = false
 
   tags = {
-    Name = "mehar-private-1"
+    Name = "naeim-private-1"
   }
 }
 
@@ -57,6 +57,6 @@ resource "aws_subnet" "private_2" {
   map_public_ip_on_launch = false
 
   tags = {
-    Name = "mehar-private-2"
+    Name = "naeim-private-2"
   }
 }
