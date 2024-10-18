@@ -1,6 +1,6 @@
 # Database subnet group
  resource "aws_db_subnet_group" "db_subnet" {
-  name       = "db-subnet"
+  name       = "subnet-0d666bfac636becd4"
   subnet_ids = [aws_subnet.private_1.id, aws_subnet.private_2.id]
 }
 
