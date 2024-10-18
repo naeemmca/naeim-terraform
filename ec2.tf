@@ -1,5 +1,5 @@
 resource "aws_instance" "web1" {
-  ami                         = "ami-0866a3c8686eaeeba"
+  ami                         = ""ami-047126e50991d067b"
   instance_type               = "t2.nano"
   key_name                    = "mehar-two-tier-public-key"
   depends_on                  = [aws_key_pair.two-tier-public-key, aws_db_instance.project_db]
