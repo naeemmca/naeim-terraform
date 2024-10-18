@@ -7,7 +7,7 @@ resource "aws_route_table" "project_rt" {
     gateway_id = aws_internet_gateway.ig.id
   }
   tags = {
-    Name = "mehar-two-tier-rt"
+    Name = "naeim-two-tier-rt"
   }
 }
 
@@ -24,7 +24,7 @@ resource "aws_route_table_association" "public_route_2" {
 
 # Create security groups
 resource "aws_security_group" "public_sg" {
-  name        = "mehar-public-sg"
+  name        = "naeim-public-sg"
   description = "Allow web and ssh traffic"
   vpc_id      = aws_vpc.vpc.id
 
@@ -56,7 +56,7 @@ resource "aws_security_group" "public_sg" {
 }
 
 resource "aws_security_group" "private_sg" {
-  name        = "mehar-private-sg"
+  name        = "naeim-private-sg"
   description = "Allow web tier and ssh traffic"
   vpc_id      = aws_vpc.vpc.id
 
