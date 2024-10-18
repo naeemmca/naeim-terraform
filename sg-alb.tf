@@ -1,6 +1,6 @@
 # Security group for ALB
 resource "aws_security_group" "alb_sg" {
-  name        = "mehar-alb-sg"
+  name        = "naeim-alb-sg"
   description = "security group for alb"
   vpc_id      = aws_vpc.vpc.id
 
@@ -20,7 +20,7 @@ resource "aws_security_group" "alb_sg" {
 
 # Create ALB
 resource "aws_lb" "two-tier-alb" {
-  name               = "mehar-alb"
+  name               = "naeim-alb"
   internal           = false
   load_balancer_type = "application"
   security_groups    = [aws_security_group.alb_sg.id]
@@ -29,7 +29,7 @@ resource "aws_lb" "two-tier-alb" {
 
 # Create ALB target group
 resource "aws_lb_target_group" "two-tier-tg" {
-  name     = "mehar-two-tier-tg"
+  name     = "naeim-two-tier-tg"
   port     = 80
   protocol = "HTTP"
   vpc_id   = aws_vpc.vpc.id
